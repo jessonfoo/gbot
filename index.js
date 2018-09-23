@@ -5,7 +5,6 @@ const Promise = require("bluebird");
 const Discord = require('discord.js');
 
 const client = new Discord.Client();
-p
 
 var token = process.env.TOKEN;
 client.on('ready', () => {
@@ -21,7 +20,7 @@ client.on('message', msg => {
 
         let body = res.getBody();
         if(body) {
-          var textResponse = coalesce(body.status,body.text));
+          var textResponse = coalesce(body.status,body.text);
           console.log(textResponse);
           return msg.reply(textResponse);
         }else{
